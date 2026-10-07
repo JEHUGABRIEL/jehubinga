@@ -194,7 +194,7 @@ export const projects: Project[] = [
     subtitle: "Institutional Website & Events Platform",
     category: "Corporate Website",
     year: "2026",
-    liveLink: "https://github.com/JEHUGABRIEL/liam-groupe",
+    liveLink: "https://liam-groupe.vercel.app",
     Thumb: LiamThumb,
     intro:
       "The website of LIAM Groupe, a Bangui-based network \"of excellence in the service of development\", presenting its activities, events, partners and news.",
