@@ -1,3 +1,5 @@
+import type { ReactElement } from "react";
+
 function Dot({ className = "" }: { className?: string }) {
   return <span className={`h-2 w-2 rounded-full ${className}`} />;
 }
@@ -239,3 +241,13 @@ export function LiamThumb() {
     </div>
   );
 }
+
+/** Hand-drawn thumbnails for the seeded projects, keyed by slug. */
+export const thumbsBySlug: Record<string, () => ReactElement> = {
+  gcfi: GcfiThumb,
+  "cosi-lewa": LewaThumb,
+  ebia: EbiaThumb,
+  "seni-biani": SeniBianiThumb,
+  "stock-manager": StockThumb,
+  "liam-groupe": LiamThumb,
+};

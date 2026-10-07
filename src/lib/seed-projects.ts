@@ -1,33 +1,16 @@
-import type { ReactElement } from "react";
-import {
-  GcfiThumb,
-  LewaThumb,
-  EbiaThumb,
-  SeniBianiThumb,
-  StockThumb,
-  LiamThumb,
-} from "@/components/ProjectThumbs";
+import type { ProjectText } from "./types";
 
-export type Project = {
+/**
+ * Initial projects, written to the database the first time it is used.
+ * After that, projects are managed from the back-office (/admin/projects).
+ */
+export type SeedProject = ProjectText & {
   slug: string;
-  name: string;
-  subtitle: string;
-  category: string;
   year: string;
   liveLink: string;
-  Thumb: () => ReactElement;
-  intro: string;
-  about: string[];
-  impactHeading: string;
-  impactText: string;
-  visualLanguage: string[];
-  structuredStorytelling: string[];
-  builtForRealUse: string;
-  foundationForGrowth: string;
-  clarityScales: string;
 };
 
-export const projects: Project[] = [
+export const seedProjects: SeedProject[] = [
   {
     slug: "gcfi",
     name: "GCFI",
@@ -35,7 +18,6 @@ export const projects: Project[] = [
     category: "Corporate Website & Back-office",
     year: "2026",
     liveLink: "https://www.gcfi-rca.com",
-    Thumb: GcfiThumb,
     intro:
       "GCFI is the bilingual web platform of a telecom and IT company based in Bangui, Central African Republic. It brings its services, professional training catalogue and online shop together in one place, backed by a full admin back-office.",
     about: [
@@ -67,7 +49,6 @@ export const projects: Project[] = [
     category: "Corporate Website",
     year: "2026",
     liveLink: "https://www.lewaconsultingroup.com",
-    Thumb: LewaThumb,
     intro:
       "The institutional website of Cabinet COSI Lewa-Consulting Group, an audit, accounting, tax advisory and professional training firm based in Bangui, Central African Republic.",
     about: [
@@ -99,7 +80,6 @@ export const projects: Project[] = [
     category: "Web & Mobile Application",
     year: "2026",
     liveLink: "https://github.com/JEHUGABRIEL/ebia-v2",
-    Thumb: EbiaThumb,
     intro:
       "E-Bia — \"the musical pulse of the CAR\" — is a music streaming platform dedicated to Central African artists, with a web app, an Android app and a Shazam-style audio recognition feature.",
     about: [
@@ -131,7 +111,6 @@ export const projects: Project[] = [
     category: "Healthcare Web Application",
     year: "2026",
     liveLink: "https://gitlab.com/my-hospital-management/hospital-management",
-    Thumb: SeniBianiThumb,
     intro:
       "Seni Biani is a complete clinic and hospital management system covering the patient journey from appointment to billing, along with the pharmacy, laboratory, staff and administration.",
     about: [
@@ -163,7 +142,6 @@ export const projects: Project[] = [
     category: "SaaS Web Application",
     year: "2026",
     liveLink: "https://gitlab.com/stock-management-final-project/stock-frontend-react",
-    Thumb: StockThumb,
     intro:
       "Stock Manager Pro is a multi-tenant SaaS for inventory management: products, stock movements, suppliers, low-stock alerts and reports, for several companies on one platform.",
     about: [
@@ -195,7 +173,6 @@ export const projects: Project[] = [
     category: "Corporate Website",
     year: "2026",
     liveLink: "https://liam-groupe.vercel.app",
-    Thumb: LiamThumb,
     intro:
       "The website of LIAM Groupe, a Bangui-based network \"of excellence in the service of development\", presenting its activities, events, partners and news.",
     about: [
@@ -221,17 +198,3 @@ export const projects: Project[] = [
       "As the number of events and partners grows, categories and consistent cards keep the site easy to navigate.",
   },
 ];
-
-export function getProject(slug: string) {
-  return projects.find((p) => p.slug === slug);
-}
-
-export function getOtherProjects(slug: string, count = 2) {
-  const others = projects.filter((p) => p.slug !== slug);
-  const startIndex = projects.findIndex((p) => p.slug === slug);
-  const rotated = [
-    ...others.slice(startIndex % others.length),
-    ...others.slice(0, startIndex % others.length),
-  ];
-  return rotated.slice(0, count);
-}

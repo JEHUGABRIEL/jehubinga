@@ -2,28 +2,21 @@
 
 import { createContext, useContext, ReactNode } from "react";
 import en from "../../messages/en.json";
-import fr from "../../messages/fr.json";
+import type { Locale, SiteContent } from "./types";
 
-export type Locale = "en" | "fr";
+export type { Locale } from "./types";
 
-const translations = { en, fr } as const;
+const I18nContext = createContext<SiteContent>(en);
 
-type Translations = typeof en;
-
-const I18nContext = createContext<Translations>(en);
-
+/** `messages` comes from the database (see getSiteContent), with JSON defaults. */
 export function I18nProvider({
-  locale,
+  messages,
   children,
 }: {
-  locale: Locale;
+  messages: SiteContent;
   children: ReactNode;
 }) {
-  return (
-    <I18nContext.Provider value={translations[locale]}>
-      {children}
-    </I18nContext.Provider>
-  );
+  return <I18nContext.Provider value={messages}>{children}</I18nContext.Provider>;
 }
 
 export function useTranslations() {

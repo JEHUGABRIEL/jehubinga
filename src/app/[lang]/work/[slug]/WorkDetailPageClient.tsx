@@ -1,26 +1,23 @@
 "use client";
 
-import { use } from "react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WorkGrid } from "@/components/WorkGrid";
 import { ArrowUpRight } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 import { PageIntro } from "@/components/PageIntro";
-import { getProject, getOtherProjects } from "@/lib/projects";
+import { ProjectThumb } from "@/components/ProjectThumb";
+import type { Project } from "@/lib/types";
 import { useTranslations } from "@/lib/i18n";
 
 export function WorkDetailPageClient({
-  slug,
-  lang,
+  project,
+  others,
 }: {
-  slug: string;
-  lang: string;
+  project: Project;
+  others: Project[];
 }) {
-  const project = getProject(slug)!;
   const t = useTranslations();
-  const { Thumb } = project;
-  const others = getOtherProjects(slug);
 
   return (
     <>
@@ -51,6 +48,8 @@ export function WorkDetailPageClient({
               </div>
               <a
                 href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-1.5 rounded-full border border-ink/15 px-4 py-2 text-sm font-medium transition-colors hover:bg-ink hover:text-paper"
               >
                 {t.work.liveLink}
@@ -60,7 +59,7 @@ export function WorkDetailPageClient({
 
             <Reveal delay={0.25} className="mt-10 sm:mt-14">
               <div className="aspect-video overflow-hidden rounded-2xl">
-                <Thumb />
+                <ProjectThumb project={project} />
               </div>
             </Reveal>
           </div>
@@ -90,10 +89,10 @@ export function WorkDetailPageClient({
 
             <Reveal className="grid gap-6 sm:grid-cols-2 sm:gap-8">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                <Thumb />
+                <ProjectThumb project={project} />
               </div>
               <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                <Thumb />
+                <ProjectThumb project={project} />
               </div>
             </Reveal>
 
@@ -130,7 +129,7 @@ export function WorkDetailPageClient({
 
             <Reveal>
               <div className="aspect-[21/9] overflow-hidden rounded-2xl">
-                <Thumb />
+                <ProjectThumb project={project} />
               </div>
             </Reveal>
 

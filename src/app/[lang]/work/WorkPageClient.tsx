@@ -4,10 +4,10 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WorkGrid } from "@/components/WorkGrid";
 import { PageIntro } from "@/components/PageIntro";
-import { projects } from "@/lib/projects";
+import type { Project } from "@/lib/types";
 import { useTranslations } from "@/lib/i18n";
 
-export function WorkPageClient({ lang }: { lang: string }) {
+export function WorkPageClient({ projects }: { projects: Project[] }) {
   const t = useTranslations();
   return (
     <>

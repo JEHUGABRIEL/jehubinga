@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { isValidSessionToken, SESSION_COOKIE } from "@/lib/session";
 
 const locales = ["en", "fr"];
 const defaultLocale = "en";
@@ -26,6 +27,18 @@ function getLocale(request: NextRequest): string {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Back-office: not localised. Optimistic session check here; every admin
+  // page and Server Action re-checks with requireAdmin().
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) {
+    if (
+      pathname !== "/admin/login" &&
+      !isValidSessionToken(request.cookies.get(SESSION_COOKIE)?.value)
+    ) {
+      return NextResponse.redirect(new URL("/admin/login", request.url));
+    }
+    return;
+  }
 
   // Skip internal paths
   if (

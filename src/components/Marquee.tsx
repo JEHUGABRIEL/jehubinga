@@ -30,13 +30,16 @@ function Row() {
 
 export function Marquee() {
   return (
-    <div
-      className="marquee -rotate-1 overflow-hidden border-y border-ink/15 bg-near-black py-5 text-paper sm:py-7"
-      aria-label={skills.join(", ")}
-    >
-      <div className="marquee-track flex w-max" aria-hidden="true">
-        <Row />
-        <Row />
+    // The tilted band is wider than the viewport; clip it so the page never scrolls sideways.
+    <div className="overflow-hidden py-4">
+      <div
+        className="marquee -mx-4 -rotate-1 overflow-hidden border-y border-ink/15 bg-near-black py-5 text-paper sm:py-7"
+        aria-label={skills.join(", ")}
+      >
+        <div className="marquee-track flex w-max" aria-hidden="true">
+          <Row />
+          <Row />
+        </div>
       </div>
     </div>
   );

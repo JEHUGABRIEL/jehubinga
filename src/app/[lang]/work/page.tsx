@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import en from "../../../../messages/en.json";
-import fr from "../../../../messages/fr.json";
+import { getProjects, getSiteContent } from "@/lib/content";
 import { WorkPageClient } from "./WorkPageClient";
-
-const translations = { en, fr } as const;
 
 export async function generateMetadata({
   params,
@@ -11,7 +8,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const t = translations[lang as "en" | "fr"] ?? translations.en;
+  const t = await getSiteContent(lang === "fr" ? "fr" : "en");
   return {
     title: t.work.metaTitle,
     description: t.work.metaDescription,
@@ -24,5 +21,6 @@ export default async function WorkPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  return <WorkPageClient lang={lang} />;
+  const projects = await getProjects(lang === "fr" ? "fr" : "en");
+  return <WorkPageClient projects={projects} />;
 }

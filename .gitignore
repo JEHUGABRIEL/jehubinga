@@ -42,3 +42,4 @@ next-env.d.ts
 
 # design reference screenshots (local only)
 /design
+.env*.local

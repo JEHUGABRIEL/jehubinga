@@ -64,7 +64,9 @@
     "project": "Votre Projet",
     "projectPlaceholder": "Parlez-nous de votre projet",
     "submit": "Envoyer",
-    "thankYou": "Merci !"
+    "thankYou": "Merci !",
+    "sending": "Envoi…",
+    "error": "Une erreur est survenue. Réessayez ou écrivez-moi directement par email."
   },
   "footer": {
     "headline": "Accélérer\nles Start-ups\npour la Croissance.",

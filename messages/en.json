@@ -64,7 +64,9 @@
     "project": "Your Project",
     "projectPlaceholder": "Tell us about your project",
     "submit": "Submit",
-    "thankYou": "Thank you!"
+    "thankYou": "Thank you!",
+    "sending": "Sending…",
+    "error": "Something went wrong. Please try again or email me directly."
   },
   "footer": {
     "headline": "Scaling\nStart-ups\nfor Growth.",

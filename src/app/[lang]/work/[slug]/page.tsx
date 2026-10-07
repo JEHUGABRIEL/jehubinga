@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import en from "../../../../../messages/en.json";
-import fr from "../../../../../messages/fr.json";
-import { getProject } from "@/lib/projects";
+import { getProjects } from "@/lib/content";
+import type { Project } from "@/lib/types";
 import { WorkDetailPageClient } from "./WorkDetailPageClient";
 
-const translations = { en, fr } as const;
+async function load(lang: string, slug: string) {
+  const projects = await getProjects(lang === "fr" ? "fr" : "en");
+  const index = projects.findIndex((p) => p.slug === slug);
+  if (index === -1) return null;
+  const others: Project[] = [];
+  for (let i = 1; i < projects.length && others.length < 2; i++) {
+    others.push(projects[(index + i) % projects.length]);
+  }
+  return { project: projects[index], others };
+}
 
 export async function generateMetadata({
   params,
@@ -13,12 +21,11 @@ export async function generateMetadata({
   params: Promise<{ slug: string; lang: string }>;
 }): Promise<Metadata> {
   const { slug, lang } = await params;
-  const project = getProject(slug);
-  if (!project) return {};
-  const t = translations[lang as "en" | "fr"] ?? translations.en;
+  const data = await load(lang, slug);
+  if (!data) return {};
   return {
-    title: `${project.name} — ${t.footer.contact === "/Contact" ? "BINGA" : "BINGA"}`,
-    description: project.intro,
+    title: `${data.project.name} — BINGA`,
+    description: data.project.intro,
   };
 }
 
@@ -28,7 +35,7 @@ export default async function WorkDetailPage({
   params: Promise<{ slug: string; lang: string }>;
 }) {
   const { slug, lang } = await params;
-  const project = getProject(slug);
-  if (!project) notFound();
-  return <WorkDetailPageClient slug={slug} lang={lang} />;
+  const data = await load(lang, slug);
+  if (!data) notFound();
+  return <WorkDetailPageClient project={data.project} others={data.others} />;
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useActionState } from "react";
+import { sendContactMessage, type ContactState } from "@/app/actions";
 import {
   GitHubIcon,
   InstagramIcon,
@@ -23,13 +24,12 @@ const socials = [
 ];
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction, pending] = useActionState<ContactState, FormData>(
+    sendContactMessage,
+    { status: "idle" }
+  );
   const t = useTranslations();
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
+  const sent = state.status === "sent";
 
   return (
     <section id="contact" className="px-6 py-28 sm:px-10 sm:py-36">
@@ -63,13 +63,15 @@ export function Contact() {
 
         <Reveal delay={0.12}>
           <form
-            onSubmit={handleSubmit}
+            action={formAction}
             className="flex flex-col gap-5 rounded-2xl bg-near-black p-7 text-paper sm:p-8"
           >
             <label className="flex flex-col gap-2 text-sm">
               {t.contact.name}
               <input
                 required
+                name="name"
+                maxLength={120}
                 type="text"
                 placeholder={t.contact.namePlaceholder}
                 className="rounded-lg border border-paper/20 bg-transparent px-4 py-3 text-sm text-paper placeholder:text-paper/40 outline-none transition-colors duration-200 hover:border-paper/35 focus:border-paper/60"
@@ -79,6 +81,8 @@ export function Contact() {
               {t.contact.email}
               <input
                 required
+                name="email"
+                maxLength={200}
                 type="email"
                 placeholder={t.contact.emailPlaceholder}
                 className="rounded-lg border border-paper/20 bg-transparent px-4 py-3 text-sm text-paper placeholder:text-paper/40 outline-none transition-colors duration-200 hover:border-paper/35 focus:border-paper/60"
@@ -88,17 +92,38 @@ export function Contact() {
               {t.contact.project}
               <textarea
                 required
+                name="body"
+                maxLength={5000}
                 rows={4}
                 placeholder={t.contact.projectPlaceholder}
                 className="resize-y rounded-lg border border-paper/20 bg-transparent px-4 py-3 text-sm text-paper placeholder:text-paper/40 outline-none focus:border-paper/50"
               />
             </label>
+            {/* Honeypot for bots, hidden from people and assistive tech */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
             <button
               type="submit"
-              className="mt-1 rounded-lg bg-paper py-3.5 text-sm font-semibold text-near-black transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
+              disabled={pending || sent}
+              className="mt-1 rounded-lg bg-paper py-3.5 text-sm font-semibold text-near-black transition-all duration-200 hover:opacity-90 active:scale-[0.98] disabled:cursor-default disabled:opacity-80"
             >
-              {submitted ? t.contact.thankYou : t.contact.submit}
+              {sent
+                ? t.contact.thankYou
+                : pending
+                  ? t.contact.sending
+                  : t.contact.submit}
             </button>
+            {state.status === "error" && (
+              <p role="alert" className="text-sm text-red-300">
+                {t.contact.error}
+              </p>
+            )}
           </form>
         </Reveal>
       </div>

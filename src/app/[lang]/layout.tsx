@@ -1,26 +1,12 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Inter } from "next/font/google";
 import "../globals.css";
-import { I18nProvider, Locale } from "@/lib/i18n";
+import { inter, interTight } from "../fonts";
+import { I18nProvider } from "@/lib/i18n";
+import { getSiteContent } from "@/lib/content";
 import { notFound } from "next/navigation";
 import { MotionProvider } from "@/components/MotionProvider";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import en from "../../../messages/en.json";
-import fr from "../../../messages/fr.json";
-
-const interTight = Inter_Tight({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
-const translations = { en, fr } as const;
+import { PageViewTracker } from "@/components/PageViewTracker";
 
 export async function generateMetadata({
   params,
@@ -28,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const t = translations[lang as Locale] ?? translations.en;
+  const t = await getSiteContent(lang === "fr" ? "fr" : "en");
   return {
     title: t.metadata.title,
     description: t.metadata.description,
@@ -44,6 +30,7 @@ export default async function RootLayout({
 }) {
   const { lang } = await params;
   if (lang !== "en" && lang !== "fr") notFound();
+  const messages = await getSiteContent(lang);
 
   return (
     <html
@@ -53,7 +40,8 @@ export default async function RootLayout({
       <body className="min-h-full bg-paper text-ink font-body">
         <MotionProvider>
           <ScrollProgress />
-          <I18nProvider locale={lang as Locale}>{children}</I18nProvider>
+          <PageViewTracker />
+          <I18nProvider messages={messages}>{children}</I18nProvider>
         </MotionProvider>
       </body>
     </html>
