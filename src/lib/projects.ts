@@ -1,12 +1,11 @@
 import type { ReactElement } from "react";
 import {
-  DamasThumb,
-  NajmThumb,
-  KaviThumb,
-  PostWingThumb,
-  ShamThumb,
-  AbjadThumb,
-  FaseelhThumb,
+  GcfiThumb,
+  LewaThumb,
+  EbiaThumb,
+  SeniBianiThumb,
+  StockThumb,
+  LiamThumb,
 } from "@/components/ProjectThumbs";
 
 export type Project = {
@@ -30,228 +29,196 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "damas",
-    name: "Damas",
-    subtitle: "Agency Framer Template",
-    category: "Free Framer Template",
-    year: "2025",
-    liveLink: "#",
-    Thumb: DamasThumb,
+    slug: "gcfi",
+    name: "GCFI",
+    subtitle: "Telecom, Training & E-commerce Platform",
+    category: "Corporate Website & Back-office",
+    year: "2026",
+    liveLink: "https://www.gcfi-rca.com",
+    Thumb: GcfiThumb,
     intro:
-      "Damas is a modern creative agency template built for bold visuals, smooth interactions, and standout storytelling. Perfect for agencies, studios, and creators who want a polished, high impact online presence without starting from scratch.",
+      "GCFI is the bilingual web platform of a telecom and IT company based in Bangui, Central African Republic. It brings its services, professional training catalogue and online shop together in one place, backed by a full admin back-office.",
     about: [
-      "Damas is a refined digital template crafted for modern brands that value clarity, elegance, and strong visual presence. Built with versatility in mind, it adapts seamlessly across industries—whether for studios, agencies, or product-focused businesses looking to elevate their online identity.",
-      "At its core, Damas is about balance. It blends bold structure with subtle sophistication, creating a foundation that feels both contemporary and timeless.",
+      "The site presents GCFI's telecom and IT services, lists its certified training sessions and sells equipment online, in French first with an English version.",
+      "Behind the public pages sits an authenticated area for customers and a back-office where the team manages content, training sessions, products and orders without touching code.",
     ],
-    impactHeading: "Designing for Impact, Built for Flexibility",
+    impactHeading: "One Platform for Services, Training and Sales",
     impactText:
-      "The goal behind Damas was to create a system that doesn’t just look good, but performs. Every section is intentionally structured to guide attention, highlight key content, and support storytelling without overwhelming the user. The result is a template that feels confident, clean, and highly adaptable.",
+      "Before the platform, services, training and products lived in separate channels. Bringing them under one site gives clients a single entry point and gives the team one tool to keep everything up to date.",
     visualLanguage: [
-      "Damas uses a minimal yet striking visual approach. Strong typography anchors the layout, while generous spacing and structured grids create rhythm and clarity. The color system is intentionally restrained, allowing brands to easily customize while maintaining a polished and cohesive look.",
-      "Subtle contrasts and refined alignments bring a sense of precision, helping content stand out without unnecessary decoration.",
+      "A clean blue palette echoes the telecom world and keeps the interface trustworthy and professional.",
+      "Large, legible typography and clear cards make the catalogue easy to browse on the mobile connections most visitors use.",
     ],
     structuredStorytelling: [
-      "The layout is designed to flow naturally—from introduction to deeper engagement. Each section builds on the previous one, making it easy to present services, showcase work, or communicate brand values in a clear and compelling way.",
-      "This structure ensures that users not only explore, but understand and connect with the content.",
+      "The home page moves from who GCFI is, to what it offers, to how to get in touch or buy — so every visitor finds a next step quickly.",
+      "Training and product pages share the same structure, which keeps the experience predictable as the catalogue grows.",
     ],
     builtForRealUse:
-      "Beyond aesthetics, Damas is highly practical. It’s optimized for performance, responsiveness, and ease of editing inside Framer. Every component is reusable and scalable, allowing creators to expand pages, adjust layouts, and maintain consistency without friction.",
+      "Built with Next.js, TypeScript, Tailwind CSS and Supabase (auth, database, edge functions), with images served through Cloudinary and deployed on Vercel.",
     foundationForGrowth:
-      "Damas is more than a template—it’s a system designed to evolve with the brand using it. Whether expanding content, launching new services, or refining positioning, the structure supports growth without losing visual integrity.",
+      "A modular feature-based architecture lets new services, training categories or shop features be added without reworking the existing pages.",
     clarityScales:
-      "Every element within Damas is crafted to serve a purpose—bringing together design and function in a way that feels effortless. It empowers brands to present themselves with confidence, precision, and lasting impact.",
+      "Whether a visitor is looking for connectivity, a training course or a product, the platform keeps the path short and the information clear.",
   },
   {
-    slug: "najm",
-    name: "Najm",
-    subtitle: "SaaS Framer Template",
-    category: "Free Framer Template",
-    year: "2025",
-    liveLink: "#",
-    Thumb: NajmThumb,
+    slug: "cosi-lewa",
+    name: "COSI Lewa",
+    subtitle: "Audit & Consulting Firm Website",
+    category: "Corporate Website",
+    year: "2026",
+    liveLink: "https://www.lewaconsultingroup.com",
+    Thumb: LewaThumb,
     intro:
-      "Najm is an AI-powered SaaS template built to present complex product features with clarity. Perfect for founders who need a polished, conversion-driven launchpad without a design team.",
+      "The institutional website of Cabinet COSI Lewa-Consulting Group, an audit, accounting, tax advisory and professional training firm based in Bangui, Central African Republic.",
     about: [
-      "Najm is a dark, focused SaaS template designed for AI products that need to feel cutting-edge from the first scroll. It leans on contrast and motion to keep attention on the product itself.",
-      "Every section is built to translate technical capability into a story users can immediately understand and trust.",
+      "The site presents the firm's six areas of expertise — audit, accounting & finance, governance consulting, training, business support and professional events — each with its own detailed page.",
+      "It also publishes the firm's training catalogue with pricing sheets, its news and its contact details, in both French and English.",
     ],
-    impactHeading: "Designing for Impact, Built for Flexibility",
+    impactHeading: "A Credible Online Presence for a Growing Firm",
     impactText:
-      "Najm was built so that every feature block earns its place. The layout guides visitors from problem to solution in a few deliberate steps, keeping the experience fast and confident.",
+      "For a consulting firm, trust is everything. The site gives prospective clients a clear, professional view of what the firm does and how it works, before the first meeting.",
     visualLanguage: [
-      "A near-black canvas with violet accent gradients gives Najm a premium, technical feel. Typography stays large and direct, so the product's value proposition is never in doubt.",
-      "Micro-interactions on cards and buttons add just enough motion to feel alive without distracting from the content.",
+      "Fraunces headings paired with Inter body text and IBM Plex Mono for figures give the site an editorial, serious tone suited to finance and audit.",
+      "A warm, restrained palette keeps the focus on content and reinforces a sense of reliability.",
     ],
     structuredStorytelling: [
-      "The page is structured around a simple arc: capability, workflow, proof. Each section reinforces the next, so visitors build conviction as they scroll.",
-      "Modular sections make it easy to reorder the narrative as the product evolves.",
+      "Each service page follows the same arc: the services offered, a four-step engagement process, and related training courses.",
+      "This consistency helps visitors compare offerings and understand exactly what working with the firm looks like.",
     ],
     builtForRealUse:
-      "Najm ships with reusable feature cards, pricing blocks, and CTA patterns so founders can launch and iterate quickly without touching the core structure.",
+      "Built with Next.js 16 (App Router), TypeScript and Tailwind CSS v4, with full FR/EN routing and dynamic pages for every service and training course.",
     foundationForGrowth:
-      "As the product matures, Najm's component system scales with it—new features, integrations, and proof points slot in without breaking the visual language.",
+      "Services, training courses and news are data-driven, so the firm can add new offerings without new layouts.",
     clarityScales:
-      "The template stays legible at every size, keeping the product story clear whether a visitor skims for ten seconds or reads every section.",
+      "As the catalogue grows, the shared page structure keeps every new service and course easy to find and to read.",
   },
   {
-    slug: "kavi",
-    name: "Kavi",
-    subtitle: "AI Framer Template",
-    category: "Free Framer Template",
-    year: "2024",
-    liveLink: "#",
-    Thumb: KaviThumb,
+    slug: "ebia",
+    name: "E-Bia",
+    subtitle: "Music Streaming Platform for the CAR",
+    category: "Web & Mobile Application",
+    year: "2026",
+    liveLink: "https://github.com/JEHUGABRIEL/ebia-v2",
+    Thumb: EbiaThumb,
     intro:
-      "Kavi is a vibrant AI product template built to launch fast without feeling generic. Bold gradients and confident type make first impressions count.",
+      "E-Bia — \"the musical pulse of the CAR\" — is a music streaming platform dedicated to Central African artists, with a web app, an Android app and a Shazam-style audio recognition feature.",
     about: [
-      "Kavi was designed for AI tools that want to feel approachable rather than intimidating. Soft gradients and rounded shapes soften the technical subject matter.",
-      "The template balances playfulness with credibility, so new products can feel established from day one.",
+      "Listeners can stream tracks, follow local artists, build playlists and discover trending music, while artists get a space to publish and promote their work.",
+      "A dedicated audio service fingerprints validated tracks so users can identify a song playing around them in a few seconds.",
     ],
-    impactHeading: "Designing for Impact, Built for Flexibility",
+    impactHeading: "Giving Central African Music a Home Online",
     impactText:
-      "Kavi's sections are built around fast comprehension—clear headlines, generous whitespace, and a single obvious next step on every screen.",
+      "Local artists rarely get visibility on global platforms. E-Bia gives them a platform built around their catalogue, and gives listeners an easy way to discover it.",
     visualLanguage: [
-      "A pink-to-orange gradient system paired with soft blurred shapes gives Kavi its distinct, energetic identity.",
-      "Rounded corners and friendly type choices keep the tone warm even as the content gets technical.",
+      "A dark interface with warm orange-to-rose accents puts album art and music front and center.",
+      "Familiar streaming patterns — persistent player, cards, playlists — make the app instantly usable.",
     ],
     structuredStorytelling: [
-      "The page moves quickly from promise to proof, using short sections that keep momentum instead of long-form explanation.",
-      "Each block is self-contained, making it simple to reorder or swap sections during launch iterations.",
+      "Discovery flows from trending tracks to artists to albums, encouraging listeners to keep exploring the local scene.",
+      "Artist pages, comments and reactions turn listening into a two-way relationship between artists and fans.",
     ],
     builtForRealUse:
-      "Kavi includes ready-made onboarding, pricing, and testimonial sections so teams can go from template to live product in minutes.",
+      "React 19 + Vite + Tailwind front end packaged for Android with Capacitor, a Spring Boot microservice back end with Keycloak authentication and PostgreSQL, and a Python audio-fingerprinting service.",
     foundationForGrowth:
-      "The component system is built to absorb new features and use cases as the product roadmap expands.",
+      "Separate services for the API, authentication and audio recognition let each part scale and evolve independently.",
     clarityScales:
-      "Even as content grows, Kavi's generous spacing and consistent rhythm keep the page easy to scan.",
+      "As the catalogue grows, search, recognition and back-office validation keep the music library clean and easy to explore.",
   },
   {
-    slug: "postwing",
-    name: "PostWing",
-    subtitle: "Social Media Scheduler",
-    category: "Free Framer Template",
-    year: "2024",
-    liveLink: "#",
-    Thumb: PostWingThumb,
+    slug: "seni-biani",
+    name: "Seni Biani",
+    subtitle: "Clinic Management System",
+    category: "Healthcare Web Application",
+    year: "2026",
+    liveLink: "https://gitlab.com/my-hospital-management/hospital-management",
+    Thumb: SeniBianiThumb,
     intro:
-      "PostWing is a clean, dashboard-driven template built for scheduling and publishing tools that need to show product screenshots front and center.",
+      "Seni Biani is a complete clinic and hospital management system covering the patient journey from appointment to billing, along with the pharmacy, laboratory, staff and administration.",
     about: [
-      "PostWing was designed around a single idea: show, don't tell. Dashboard previews take center stage across the page.",
-      "The template keeps copy short and lets the product interface do the convincing.",
+      "The application centralises patients, medical records, appointments, prescriptions, hospitalisation, operating theatre, laboratory and pharmacy in a single tool.",
+      "On the administrative side it handles billing and cash desk, staff planning, attendance, leave and salaries, with dashboards and statistics for management.",
     ],
-    impactHeading: "Designing for Impact, Built for Flexibility",
+    impactHeading: "Every Department Working From the Same Record",
     impactText:
-      "Every section pairs a short, benefit-led headline with a real interface screenshot, so visitors immediately understand the workflow.",
+      "Paper files and disconnected tools slow care down. Seni Biani gives every department access to the same up-to-date patient record, reducing errors and waiting time.",
     visualLanguage: [
-      "A calm blue palette on a light background keeps the focus on the product screenshots rather than decoration.",
-      "Consistent card framing across sections makes the dashboard feel like one continuous product, not disconnected screens.",
+      "A calm teal palette and a classic sidebar layout keep the interface reassuring and efficient for daily use.",
+      "Dashboards surface the key numbers — patients, appointments, admissions — at a glance.",
     ],
     structuredStorytelling: [
-      "The layout follows the user's actual workflow—write once, schedule everywhere, track results—mirroring the product itself.",
-      "This mirrored structure makes the page double as an implicit product tour.",
+      "Modules mirror how a clinic actually works: reception, consultation, prescription, laboratory, pharmacy, billing.",
+      "Role-based access means doctors, nurses, cashiers and managers each see what matters to them.",
     ],
     builtForRealUse:
-      "PostWing includes flexible screenshot frames and platform-icon rows that are easy to swap as integrations change.",
+      "Angular 19 + Tailwind CSS front end (installable as a PWA) and a Spring Boot REST API, containerised with Docker and tested with Jest and Cypress.",
     foundationForGrowth:
-      "New platforms and workflow steps can be added as additional cards without restructuring the page.",
+      "A feature-module architecture lets new departments or services be added without disrupting the existing ones.",
     clarityScales:
-      "The consistent visual grammar keeps the product easy to understand as more features are added over time.",
+      "Even with dozens of modules, consistent navigation and role-based views keep the system easy to learn and use.",
   },
   {
-    slug: "sham",
-    name: "Sham",
-    subtitle: "Studio Framer Template",
-    category: "Free Framer Template",
-    year: "2025",
-    liveLink: "#",
-    Thumb: ShamThumb,
+    slug: "stock-manager",
+    name: "Stock Manager Pro",
+    subtitle: "Multi-tenant Inventory Management SaaS",
+    category: "SaaS Web Application",
+    year: "2026",
+    liveLink: "https://gitlab.com/stock-management-final-project/stock-frontend-react",
+    Thumb: StockThumb,
     intro:
-      "Sham is a warm, expressive digital template inspired by culture, light, and storytelling. Rooted in a sense of familiarity and depth, it's designed for brands that want to feel human, grounded, and visually rich without losing clarity.",
+      "Stock Manager Pro is a multi-tenant SaaS for inventory management: products, stock movements, suppliers, low-stock alerts and reports, for several companies on one platform.",
     about: [
-      "Whether used for creative studios, personal brands, or cultural projects, Sham creates an atmosphere that feels inviting and memorable—where content is not just presented, but experienced.",
-      "The idea behind Sham was to move beyond purely minimal design and introduce emotion into the experience. It blends structure with softness, allowing visuals, typography, and spacing to work together in a way that feels natural and fluid.",
+      "Each company gets its own isolated workspace to manage its catalogue, track every stock entry and exit and follow its suppliers.",
+      "Automatic alerts flag products running low, and reports give a clear view of stock value and movements over time.",
     ],
-    impactHeading: "Where Warmth Meets Expression, Designed to Feel Alive",
+    impactHeading: "Knowing What's in Stock, in Real Time",
     impactText:
-      "Every section of Sham is built to slow the visitor down, inviting them to look closer rather than scroll past. Imagery and type share equal weight, so the brand's personality comes through in every block.",
+      "Stock-outs and overstock cost money. The application gives businesses an accurate, real-time picture of their inventory so they can reorder at the right time.",
     visualLanguage: [
-      "Sham leans on tactile textures, muted tones, and editorial-style typography to create a sense of craft and intention.",
-      "Full-bleed imagery paired with generous margins gives every section room to breathe.",
+      "A clean, data-first interface with colour-coded stock levels makes problems visible immediately.",
+      "Consistent tables, forms and badges keep heavy data easy to scan.",
     ],
     structuredStorytelling: [
-      "The page unfolds like a printed feature—introduction, story, proof—encouraging visitors to read rather than skim.",
-      "Pull quotes and testimonial moments are woven throughout to keep the human voice present.",
+      "The dashboard leads from overall health to alerts to individual products, so users go straight to what needs attention.",
+      "Everything is available in English and French.",
     ],
     builtForRealUse:
-      "Sham's flexible content blocks make it easy to feature new work, collaborators, or press mentions as the studio grows.",
+      "React 18 + Vite + TypeScript + TanStack Query front end, and a Spring Boot 3 / Java 21 API with JWT security, PostgreSQL, Redis caching and MinIO storage, all dockerised and tested with JUnit, Mockito and Vitest.",
     foundationForGrowth:
-      "The template is built to hold more stories over time without losing its calm, considered feel.",
+      "Multi-tenancy is built into the core, so onboarding a new company requires no extra deployment.",
     clarityScales:
-      "Even as the studio's portfolio expands, Sham's structure keeps every new addition feeling intentional.",
+      "As catalogues grow to thousands of products, caching, pagination and clear filters keep the app fast and readable.",
   },
   {
-    slug: "abjad",
-    name: "Abjad",
-    subtitle: "AI Framer Template",
-    category: "Free Framer Template",
-    year: "2025",
-    liveLink: "#",
-    Thumb: AbjadThumb,
+    slug: "liam-groupe",
+    name: "LIAM Groupe",
+    subtitle: "Institutional Website & Events Platform",
+    category: "Corporate Website",
+    year: "2026",
+    liveLink: "https://github.com/JEHUGABRIEL/liam-groupe",
+    Thumb: LiamThumb,
     intro:
-      "Abjad simplifies the way AI tools are created by handling everything from system design to policy control through natural conversation. Built for teams that want to plan, adapt, and grow with confidence.",
+      "The website of LIAM Groupe, a Bangui-based network \"of excellence in the service of development\", presenting its activities, events, partners and news.",
     about: [
-      "Abjad was designed for AI infrastructure products that need to earn trust quickly. A warm, editorial palette softens a technical subject.",
-      "The template favors plain language and clear proof points over jargon, so non-technical stakeholders can follow along too.",
+      "The site introduces the group and its mission, publishes its events by category and showcases its institutional and strategic partners.",
+      "Visitors can subscribe to the newsletter, contact the team or apply to sponsor an event.",
     ],
-    impactHeading: "Designing for Impact, Built for Flexibility",
+    impactHeading: "Bringing Partners and Communities Together",
     impactText:
-      "Each section pairs a concrete capability with a simple visual, keeping abstract AI concepts grounded and easy to grasp.",
+      "The platform gives the group a central place to share its activities and to turn visitors into partners, sponsors and participants.",
     visualLanguage: [
-      "Soft amber and stone tones replace the typical cold, technical palette, giving Abjad an approachable, considered feel.",
-      "Generous whitespace and a restrained color system keep dense technical content legible.",
+      "Gold and deep brown tones give the brand a premium, institutional feel.",
+      "Generous spacing and strong headings keep the content clear and welcoming.",
     ],
     structuredStorytelling: [
-      "The page builds trust in stages: capability, workflow, adoption proof—mirroring how enterprise buyers actually evaluate tools.",
-      "Logo rows and trust markers are placed early to reduce hesitation before the deeper explanation begins.",
+      "The journey goes from mission to events to partners, ending with clear calls to get involved.",
+      "Event categories make it easy to find relevant activities quickly.",
     ],
     builtForRealUse:
-      "Abjad ships with reusable proof-point and logo-wall sections so teams can update social proof without touching layout.",
+      "React + Vite front end connected to a dedicated back end (with Swagger-documented API) for events, partners, news and contact requests.",
     foundationForGrowth:
-      "As the product adds capabilities, new sections slot into the same rhythm without disrupting the page's trustworthy tone.",
+      "Events, partners and news are managed as data, so the group can keep the site current without developer help.",
     clarityScales:
-      "The restrained visual system keeps even a growing feature set easy to navigate and understand.",
-  },
-  {
-    slug: "faseelh",
-    name: "Faseelh",
-    subtitle: "Environmental Framer Template",
-    category: "Free Framer Template",
-    year: "2025",
-    liveLink: "#",
-    Thumb: FaseelhThumb,
-    intro:
-      "Faseelh's platform unites people, organizations, and local governments to bring returns back to cities, offset emissions, and create spaces where both communities and ecosystems can thrive.",
-    about: [
-      "Faseelh was built for environmental and civic initiatives that need to communicate urgency without losing warmth. Natural tones and soft imagery keep the tone hopeful rather than alarmist.",
-      "The template is designed to make complex sustainability work feel approachable to everyday visitors and partners alike.",
-    ],
-    impactHeading: "Designing for Impact, Built for Flexibility",
-    impactText:
-      "Sections are structured to move visitors from awareness to action, pairing every claim with a clear, achievable next step.",
-    visualLanguage: [
-      "Deep greens and foggy, atmospheric imagery evoke landscape and growth, grounding the mission in something visible and real.",
-      "Typography stays confident and direct, keeping the call to action clear amid the emotive imagery.",
-    ],
-    structuredStorytelling: [
-      "The page follows a mission-first structure—why it matters, what's being done, how to get involved—so every visitor leaves knowing their next step.",
-      "Community stories are woven in to keep the mission personal rather than abstract.",
-    ],
-    builtForRealUse:
-      "Faseelh includes flexible sections for partners, impact metrics, and community stories that can grow with the initiative.",
-    foundationForGrowth:
-      "As new regions or programs launch, the same structure scales to hold them without losing coherence.",
-    clarityScales:
-      "The calm, consistent system keeps the mission legible even as the initiative's scope expands.",
+      "As the number of events and partners grows, categories and consistent cards keep the site easy to navigate.",
   },
 ];
 
