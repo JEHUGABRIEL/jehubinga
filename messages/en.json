@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "BINGA — Software Engineer",
+    "description": "I'm BINGA, a builder based in Syria. Software engineer and Framer creator focused on modern, scalable, conversion-driven web experiences."
+  },
+  "nav": {
+    "about": "About Me",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "line1": "Software",
+    "line2": "Engineer",
+    "copyright": "©2026",
+    "tagline": "/Creating since 2020"
+  },
+  "about": {
+    "greeting": "Hey!",
+    "intro": "I'm BINGA, a builder based in Syria, currently working on Templyo, a platform for high-quality Framer templates.",
+    "description1": "I'm a software engineer and Framer creator with a strong focus on building modern, scalable, and conversion-driven web experiences.",
+    "description2": "Over the years, I've created and shipped multiple SaaS products and Framer templates used by global customers, helping them launch faster.",
+    "cta": "Get Started"
+  },
+  "scrollReveal": "From idea to launch. Clean, scalable digital products built to move fast, stay simple, and perform in real-world use, driven by clarity, structured systems, and intentional design.",
+  "services": {
+    "title": "Services",
+    "items": [
+      { "name": "Website Migration", "tags": ["Web Migration", "Optimization", "Framer Rebuild"] },
+      { "name": "Framer Templates", "tags": ["Startup", "Agency", "SaaS"] },
+      { "name": "Frontend Development", "tags": ["UI Dev", "Responsive Layouts", "Web Performance"] },
+      { "name": "Product Consulting", "tags": ["Product Direction", "Web Strategy", "Technical Guidance"] }
+    ]
+  },
+  "projects": {
+    "title": "Featured\nProjects",
+    "viewAll": "View All Work"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": [
+      { "quote": "Templyo completely changed how I approach building sites in Framer. The templates are not just beautiful, they're actually structured in a way that makes scaling so much easier.", "name": "Yakoub Kashmiri", "role": "Marketing Director" },
+      { "quote": "I've tried dozens of Framer templates, but Templyo stands out. Everything feels intentional, from the layout to the smallest interactions.", "name": "Daniel K.", "role": "Indie Maker" },
+      { "quote": "Templyo saved me weeks of work. I was able to launch my landing page in a day, and it still looks fully custom.", "name": "Mark M.", "role": "Startup Founder" },
+      { "quote": "The quality is insane. Clean structure, smooth animations, and super easy to customize. It feels like a premium product from start to finish.", "name": "Omar H.", "role": "Frontend Developer" }
+    ]
+  },
+  "thoughts": {
+    "title": "Thoughts",
+    "cta": "See how we shape brands with clarity and craft—explore our blog",
+    "viewAll": "View All Work",
+    "posts": [
+      { "date": "May 5, 2025", "title": "Building Trust Through Clear Design", "excerpt": "How thoughtful visual choices create a stronger sense of reliability for modern brands." },
+      { "date": "Jun 16, 2025", "title": "The Role of Art Direction in Branding", "excerpt": "Why visual direction helps brands create emotion and a distinct point of view." }
+    ]
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "description": "Have a project or need help? Fill out the form, and we'll get back to you soon.",
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "project": "Your Project",
+    "projectPlaceholder": "Tell us about your project",
+    "submit": "Submit",
+    "thankYou": "Thank you!"
+  },
+  "footer": {
+    "headline": "Scaling\nStart-ups\nfor Growth.",
+    "quickLinks": "/Quick links",
+    "home": "Home",
+    "contact": "/Contact"
+  },
+  "work": {
+    "title": "My Brightest\nCreations",
+    "subtitle": "A showcase of my latest projects, highlighting thoughtful design, clear strategy, and impactful results.",
+    "metaTitle": "My Brightest Creations — BINGA",
+    "metaDescription": "A showcase of my latest projects, highlighting thoughtful design, clear strategy, and impactful results.",
+    "category": "Category",
+    "year": "Year",
+    "liveLink": "Live Link",
+    "aboutTemplate": "About the Template",
+    "visualLanguage": "Visual Language",
+    "structuredStorytelling": "Structured Storytelling",
+    "builtForRealUse": "Built for Real Use",
+    "foundationForGrowth": "A Foundation for Growth",
+    "clarityScales": "Clarity that Scales with You",
+    "moreProjects": "More Projects"
+  }
+}

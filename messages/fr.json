@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "BINGA — Ingénieur Logiciel",
+    "description": "Je suis BINGA, un développeur basé en Syrie. Ingénieur logiciel et créateur Framer axé sur des expériences web modernes, évolutives et orientées conversion."
+  },
+  "nav": {
+    "about": "À propos",
+    "services": "Services",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "line1": "Software",
+    "line2": "Engineer",
+    "copyright": "©2026",
+    "tagline": "/Créer depuis 2020"
+  },
+  "about": {
+    "greeting": "Salut !",
+    "intro": "Je suis BINGA, un développeur basé en Syrie, actuellement sur Templyo, une plateforme de templates Framer de haute qualité.",
+    "description1": "Je suis ingénieur logiciel et créateur Framer, avec un accent fort sur la création d'expériences web modernes, évolutives et orientées conversion.",
+    "description2": "Au fil des années, j'ai créé et livré plusieurs produits SaaS et templates Framer utilisés par des clients du monde entier, les aidant à lancer plus rapidement.",
+    "cta": "Découvrir"
+  },
+  "scrollReveal": "De l'idée au lancement. Des produits numériques propres et évolutifs, conçus pour aller vite, rester simples et performer dans un usage réel, guidés par la clarté, des systèmes structurés et un design intentionnel.",
+  "services": {
+    "title": "Services",
+    "items": [
+      { "name": "Migration de Site Web", "tags": ["Migration Web", "Optimisation", "Rebuild Framer"] },
+      { "name": "Templates Framer", "tags": ["Startup", "Agence", "SaaS"] },
+      { "name": "Développement Frontend", "tags": ["Dev UI", "Layouts Responsifs", "Performance Web"] },
+      { "name": "Conseil Produit", "tags": ["Direction Produit", "Stratégie Web", "Guidage Technique"] }
+    ]
+  },
+  "projects": {
+    "title": "Projets\nEn Vedette",
+    "viewAll": "Voir tous les projets"
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "items": [
+      { "quote": "Templyo a complètement changé ma façon de construire des sites en Framer. Les templates ne sont pas juste beaux, ils sont structurés de manière à faciliter grandement la montée en charge.", "name": "Yakoub Kashmiri", "role": "Directeur Marketing" },
+      { "quote": "J'ai essayé des dizaines de templates Framer, mais Templyo se démarque. Tout semble intentionnel, du layout aux plus petites interactions.", "name": "Daniel K.", "role": "Indie Maker" },
+      { "quote": "Templyo m'a fait gagner des semaines de travail. J'ai pu lancer ma landing page en un jour, et elle a l'air entièrement personnalisée.", "name": "Mark M.", "role": "Fondateur de Startup" },
+      { "quote": "La qualité est folle. Structure propre, animations fluides, et super facile à personnaliser. On dirait un produit premium du début à la fin.", "name": "Omar H.", "role": "Développeur Frontend" }
+    ]
+  },
+  "thoughts": {
+    "title": "Réflexions",
+    "cta": "Découvrez comment nous façonnons les marques avec clarté et savoir-faire—explorez notre blog",
+    "viewAll": "Voir tous les projets",
+    "posts": [
+      { "date": "5 Mai 2025", "title": "Bâtir la Confiance par un Design Clair", "excerpt": "Comment des choix visuels réfléchis créent un sentiment de fiabilité plus fort pour les marques modernes." },
+      { "date": "16 Juin 2025", "title": "Le Rôle de la Direction Artistique dans le Branding", "excerpt": "Pourquoi la direction visuelle aide les marques à créer de l'émotion et un point de vue distinct." }
+    ]
+  },
+  "contact": {
+    "title": "Discutons.",
+    "description": "Vous avez un projet ou besoin d'aide ? Remplissez le formulaire, et nous vous répondrons rapidement.",
+    "name": "Nom",
+    "namePlaceholder": "Entrez votre nom",
+    "email": "Email",
+    "emailPlaceholder": "Entrez votre email",
+    "project": "Votre Projet",
+    "projectPlaceholder": "Parlez-nous de votre projet",
+    "submit": "Envoyer",
+    "thankYou": "Merci !"
+  },
+  "footer": {
+    "headline": "Accélérer\nles Start-ups\npour la Croissance.",
+    "quickLinks": "/Liens rapides",
+    "home": "Accueil",
+    "contact": "/Contact"
+  },
+  "work": {
+    "title": "Mes Plus Belles\nCréations",
+    "subtitle": "Une vitrine de mes derniers projets, mettant en avant un design soigné, une stratégie claire et des résultats impactants.",
+    "metaTitle": "Mes Plus Belles Créations — BINGA",
+    "metaDescription": "Une vitrine de mes derniers projets, mettant en avant un design soigné, une stratégie claire et des résultats impactants.",
+    "category": "Catégorie",
+    "year": "Année",
+    "liveLink": "Lien Live",
+    "aboutTemplate": "À propos du Template",
+    "visualLanguage": "Langage Visuel",
+    "structuredStorytelling": "Storytelling Structuré",
+    "builtForRealUse": "Conçu pour un Vrai Usage",
+    "foundationForGrowth": "Une Fondation pour la Croissance",
+    "clarityScales": "Une Clarté qui Grandit avec Vous",
+    "moreProjects": "Plus de Projets"
+  }
+}
